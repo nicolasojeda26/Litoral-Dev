@@ -16,6 +16,7 @@ function App() {
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-foreground/70">
           <a href="#soluciones" className="hover:text-primary transition-colors">Soluciones</a>
+          <a href="#proyectos" className="hover:text-primary transition-colors">Proyectos</a>
           <a href="#diferenciales" className="hover:text-primary transition-colors">Diferenciales</a>
         </div>
         <a href="#contacto" className="hidden md:inline-flex px-5 py-2.5 rounded-full border border-border text-sm font-medium hover:bg-primary/10 transition-colors">
@@ -47,10 +48,10 @@ function App() {
               Solicitar Demo Virtual
             </a>
             <a 
-              href="#soluciones" 
+              href="#proyectos" 
               className="w-full sm:w-auto px-8 py-4 bg-transparent text-primary rounded-full font-bold text-lg border border-primary hover:bg-primary/10 transition-all"
             >
-              Ver Soluciones
+              Ver Proyectos Reales
             </a>
           </div>
         </section>
@@ -134,10 +135,9 @@ function App() {
             </div>
           </div>
         </section>
-      </main>
-
-        {/* Portfolio / Casos de Éxito */}
+        {/* Portfolio / Casos reales */}
         <Portfolio />
+      </main>
 
       <footer className="py-12 border-t border-border/50 text-center text-foreground/40 text-sm">
         <p>© {new Date().getFullYear()} Litoral Dev. Todos los derechos reservados.</p>

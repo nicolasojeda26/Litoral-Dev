@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Piezas de Instagram generadas (no forman parte del sitio)
+contenido-instagram/
