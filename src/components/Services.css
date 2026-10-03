@@ -54,12 +54,12 @@
 
 .featured-plan {
   border: 1.5px solid var(--color-primary);
-  background: rgba(0, 201, 177, 0.03);
-  box-shadow: 0 10px 40px rgba(0, 201, 177, 0.08);
+  background: rgba(29, 78, 137, 0.03);
+  box-shadow: 0 10px 40px rgba(29, 78, 137, 0.08);
 }
 
 .featured-plan:hover {
-  box-shadow: 0 15px 50px rgba(0, 201, 177, 0.18);
+  box-shadow: 0 15px 50px rgba(29, 78, 137, 0.18);
   border-color: var(--color-primary-hover);
 }
 
@@ -75,7 +75,7 @@
   padding: 0.4rem 0.8rem;
   border-radius: 50px;
   letter-spacing: 0.05em;
-  box-shadow: 0 4px 10px rgba(0, 201, 177, 0.3);
+  box-shadow: 0 4px 10px rgba(29, 78, 137, 0.3);
 }
 
 /* Plan Header & Pricing */
@@ -148,7 +148,7 @@
 /* Key Value Proposition Box */
 .key-value-prop {
   background: rgba(255, 255, 255, 0.02);
-  border: 1px dashed rgba(0, 201, 177, 0.3);
+  border: 1px dashed rgba(29, 78, 137, 0.3);
   padding: 1.2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
@@ -254,8 +254,8 @@
 }
 
 .solution-icon {
-  background: rgba(0, 201, 177, 0.08);
-  border: 1px solid rgba(0, 201, 177, 0.15);
+  background: rgba(29, 78, 137, 0.08);
+  border: 1px solid rgba(29, 78, 137, 0.15);
   border-radius: 10px;
   width: 44px;
   height: 44px;
@@ -342,7 +342,7 @@
 .integration-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-primary);
-  box-shadow: 0 10px 25px rgba(0, 201, 177, 0.06);
+  box-shadow: 0 10px 25px rgba(29, 78, 137, 0.06);
 }
 
 .integration-icon-wrapper {
@@ -403,8 +403,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 201, 177, 0.02) 100%);
-  border: 1.5px solid rgba(0, 201, 177, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(29, 78, 137, 0.02) 100%);
+  border: 1.5px solid rgba(29, 78, 137, 0.1);
   padding: 3rem;
   border-radius: 20px;
 }

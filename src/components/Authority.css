@@ -60,7 +60,7 @@
   text-align: center;
   font-weight: 600;
   color: var(--color-text-main);
-  background: rgba(0, 201, 177, 0.05);
+  background: rgba(29, 78, 137, 0.05);
 }
 
 @media (max-width: 900px) {

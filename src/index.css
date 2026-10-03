@@ -1,42 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* Litoral Dev - Audens Style Colors */
-    --background: #020617;
-    --foreground: #F8FAFC;
-    
-    --primary: #00C9B1;
-    --primary-hover: #30D5C8;
-    
-    --border: rgba(0, 201, 177, 0.2);
-    
-    --card-bg: rgba(15, 23, 42, 0.4);
+    /* Litoral Dev — marca "Costanera" (valores del manual de marca) */
+    --rio: #1D4E89;
+    --atardecer: #F26A3D;
+    --sol: #F4B942;
+    --arena: #F6EFE3;
+    --arena-200: #E7DCC8;
+    --noche: #16243A;
+    --noche-suave: #4B5A70;
+    --noche-claro: #B8C2D1;
+    --blanco: #FFFFFF;
 
-    /* Component-level aliases */
-    --color-primary: #00C9B1;
-    --color-primary-hover: #30D5C8;
-    --color-border: rgba(0, 201, 177, 0.2);
-    --color-text-main: #F8FAFC;
-    --color-text-muted: rgba(248, 250, 252, 0.6);
-    --color-text-muted-light: rgba(248, 250, 252, 0.4);
-    --color-glass: rgba(15, 23, 42, 0.4);
-    --color-bg-dark: #020617;
-    --color-bg-deep: #020617;
+    --font-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+    --font-body: "Figtree", system-ui, sans-serif;
+
+    --radius-md: 12px;
+    --radius-lg: 24px;
+    --radius-mark: 30px;
+    --radius-pill: 999px;
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* Alias semánticos */
+    --background: var(--arena);
+    --foreground: var(--noche);
+    --primary: var(--rio);
+    --primary-hover: var(--noche);
+    --border: rgba(22, 36, 58, 0.14);
+    --card-bg: var(--arena-200);
+
+    /* Alias que usan los componentes */
+    --color-primary: var(--rio);
+    --color-primary-hover: var(--noche);
+    --color-border: rgba(22, 36, 58, 0.14);
+    --color-text-main: var(--noche);
+    --color-text-muted: var(--noche-suave);
+    --color-text-muted-light: var(--noche-suave);
+    --color-glass: var(--arena-200);
+    --color-bg-dark: var(--arena);
+    --color-bg-deep: var(--arena);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-arena text-noche font-sans antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
   }
 
   body ::selection,
   body::selection {
-    background: rgba(0, 201, 177, 0.3);
-    color: #fff;
+    background: var(--atardecer);
+    color: var(--noche);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--atardecer);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
@@ -58,8 +103,10 @@
   }
 
   .section-title {
+    font-family: var(--font-display);
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 800;
+    line-height: 1.1;
     text-align: center;
     margin-bottom: 3rem;
     letter-spacing: -0.02em;
@@ -67,7 +114,83 @@
 
   .glass-card {
     background: var(--color-glass);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  /* Resaltado de marca: palabra clave en noche sobre bloque atardecer */
+  .resaltado {
+    /* El bloque cubre la altura de la letra, sin pisar la línea de arriba */
+    background: linear-gradient(var(--atardecer), var(--atardecer)) no-repeat 0 62% / 100% 76%;
+    color: var(--noche);
+    padding: 0 0.14em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Botones en píldora */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: var(--radius-pill);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 180ms var(--ease-out), background-color 180ms var(--ease-out),
+      color 180ms var(--ease-out), border-color 180ms var(--ease-out);
+  }
+
+  .btn:active {
+    transform: scale(0.97);
+  }
+
+  .btn-accion {
+    background: var(--atardecer);
+    color: var(--noche);
+  }
+
+  .btn-contorno {
+    border: 2px solid var(--rio);
+    color: var(--rio);
+  }
+
+  .btn-contorno-noche {
+    border: 2px solid var(--noche);
+    color: var(--noche);
+  }
+
+  @media (hover: hover) {
+    .btn-accion:hover {
+      background: var(--noche);
+      color: var(--arena);
+    }
+
+    .btn-contorno:hover {
+      background: var(--rio);
+      color: var(--blanco);
+    }
+
+    .btn-contorno-noche:hover {
+      background: var(--noche);
+      color: var(--arena);
+    }
+  }
+
+  /* Tarjetas claras sobre placa río */
+  .tarjeta {
+    transition: transform 220ms var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    .tarjeta:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  /* Motivo de olas del isotipo: siempre arena sobre río */
+  .olas {
+    position: absolute;
+    pointer-events: none;
+    color: var(--arena);
   }
 }

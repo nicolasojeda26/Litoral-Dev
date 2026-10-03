@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import './Portfolio.css';
+import capturaPrincessLov from '../assets/proyectos/princesslov.webp';
+import capturaPsicoPlus from '../assets/proyectos/psicoplus.webp';
 
 const WHATSAPP = 'https://wa.me/5493795769425';
 
@@ -40,6 +42,8 @@ const PROJECTS = [
     category: 'E-commerce',
     status: 'Online',
     url: 'https://princess-lov.vercel.app/',
+    // El sitio no permite mostrarse dentro de un iframe: usamos una captura.
+    image: capturaPrincessLov,
     tagline: 'Indumentaria femenina con filtros, cobro por Mercado Pago y programa de fidelidad.',
     problem: 'Vender por historias y DM: sin buscador, sin filtros y con cada pago negociado a mano.',
     highlights: [
@@ -70,6 +74,8 @@ const PROJECTS = [
     category: 'Gestión',
     status: 'Demo abierta',
     url: 'https://psicoplus-iota.vercel.app/',
+    // El sitio no permite mostrarse dentro de un iframe: usamos una captura.
+    image: capturaPsicoPlus,
     tagline: 'Gestión de consultorios de psicología: agenda, pacientes, facturación y liquidaciones.',
     problem: 'Turnos en cuaderno, honorarios calculados en Excel y ninguna trazabilidad entre profesionales.',
     highlights: [
@@ -145,7 +151,7 @@ const FILTERS = ['Todos', 'E-commerce', 'Gestión', 'Plataformas', 'Automatizaci
 
 /* ---------- Preview en vivo, montada sólo cuando entra en pantalla ---------- */
 
-const LivePreview = ({ url, name, interactive = false }) => {
+const LivePreview = ({ url, name, image, interactive = false }) => {
   const holder = useRef(null);
   const [visible, setVisible] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -174,10 +180,10 @@ const LivePreview = ({ url, name, interactive = false }) => {
   }, [visible]);
 
   useEffect(() => {
-    if (!visible || loaded) return undefined;
+    if (!visible || loaded || image) return undefined;
     const t = setTimeout(() => setFailed((f) => (loaded ? f : true)), 12000);
     return () => clearTimeout(t);
-  }, [visible, loaded]);
+  }, [visible, loaded, image]);
 
   return (
     <div className={`lp ${interactive ? 'lp-interactive' : ''}`} ref={holder}>
@@ -201,7 +207,18 @@ const LivePreview = ({ url, name, interactive = false }) => {
           </div>
         )}
 
-        {visible && (
+        {visible && image && (
+          <img
+            src={image}
+            alt={`Captura de ${name}`}
+            className={`lp-shot ${loaded ? 'is-loaded' : ''}`}
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+            onError={() => setFailed(true)}
+          />
+        )}
+
+        {visible && !image && (
           <iframe
             src={url}
             title={`Vista previa de ${name}`}
@@ -255,7 +272,7 @@ const CaseModal = ({ project, onClose }) => {
         </button>
 
         <div className="pf-modal-preview">
-          <LivePreview url={project.url} name={project.name} interactive />
+          <LivePreview url={project.url} name={project.name} image={project.image} interactive />
         </div>
 
         <div className="pf-modal-body">
@@ -382,7 +399,7 @@ const Portfolio = () => {
                 onClick={() => setOpen(p)}
                 aria-label={`Ver el caso ${p.name}`}
               >
-                <LivePreview url={p.url} name={p.name} />
+                <LivePreview url={p.url} name={p.name} image={p.image} />
                 <span className="pf-card-hoverhint">Ver el caso</span>
               </button>
 

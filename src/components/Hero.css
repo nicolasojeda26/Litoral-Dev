@@ -34,14 +34,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: rgba(0, 201, 177, 0.1);
+  background-color: rgba(29, 78, 137, 0.1);
   color: var(--color-primary);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(0, 201, 177, 0.2);
+  border: 1px solid rgba(29, 78, 137, 0.2);
 }
 
 .hero-title {
