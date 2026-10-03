@@ -86,21 +86,6 @@ const PROJECTS = [
     stack: ['React', 'Supabase', 'Vite', 'Tailwind'],
   },
   {
-    id: 'giorgio',
-    name: 'Giorgio Gestión',
-    category: 'Gestión',
-    status: 'Online',
-    url: 'https://erm-mocha.vercel.app/',
-    tagline: 'El panel que le dice al comerciante cuánto tiene que vender hoy para no perder plata.',
-    problem: 'Sabía cuánto facturaba, no cuánto ganaba: los gastos fijos nunca entraban en la cuenta del día.',
-    highlights: [
-      'Resumen de ventas y ganancia del día',
-      'Gastos fijos prorrateados y punto de equilibrio diario',
-      'Stock valorizado a precio de venta',
-    ],
-    stack: ['React', 'Vite', 'Tailwind'],
-  },
-  {
     id: 'nbg',
     name: 'NBG Indumentaria',
     category: 'Plataformas',
@@ -130,24 +115,9 @@ const PROJECTS = [
     ],
     stack: ['React', 'Vite', 'chess.js', 'Stockfish'],
   },
-  {
-    id: 'shopy',
-    name: 'ShopyDashboard',
-    category: 'Automatización',
-    status: 'Online',
-    url: 'https://shopy-dashboard-xi.vercel.app/',
-    tagline: 'Un pipeline de agentes que arma, optimiza y despacha una tienda de dropshipping sola.',
-    problem: 'Cada producto nuevo eran horas de redacción, diseño y carga manual antes de poder venderlo.',
-    highlights: [
-      'Agente de catálogo: fichas con IA y títulos SEO',
-      'Agente de arte e inyección de componentes al theme',
-      'Fulfillment automático con webhook firmado y tracking',
-    ],
-    stack: ['Python', 'FastAPI', 'Shopify GraphQL', 'IA'],
-  },
 ];
 
-const FILTERS = ['Todos', 'E-commerce', 'Gestión', 'Plataformas', 'Automatización'];
+const FILTERS = ['Todos', 'E-commerce', 'Gestión', 'Plataformas'];
 
 /* ---------- Preview en vivo, montada sólo cuando entra en pantalla ---------- */
 
@@ -350,7 +320,7 @@ const Portfolio = () => {
         <header className="pf-head">
           <span className="pf-eyebrow">Portfolio</span>
           <h2 className="pf-title">
-            Nueve sistemas reales, <span className="pf-title-accent">funcionando ahora mismo</span>.
+            Siete sistemas reales, <span className="pf-title-accent">funcionando ahora mismo</span>.
           </h2>
           <p className="pf-sub">
             No son maquetas ni plantillas. Todo lo que ves acá está desplegado y se puede abrir y usar.
@@ -358,11 +328,11 @@ const Portfolio = () => {
 
           <div className="pf-stats">
             <div className="pf-stat">
-              <strong>9</strong>
+              <strong>{PROJECTS.length}</strong>
               <span>proyectos en línea</span>
             </div>
             <div className="pf-stat">
-              <strong>4</strong>
+              <strong>{FILTERS.length - 1}</strong>
               <span>rubros distintos</span>
             </div>
             <div className="pf-stat">
