@@ -318,33 +318,42 @@ const Portfolio = () => {
     <section className="section portfolio" id="proyectos">
       <div className="container">
         <header className="pf-head">
-          <span className="pf-eyebrow">Portfolio</span>
-          <h2 className="pf-title">
-            Siete sistemas reales, <span className="pf-title-accent">funcionando ahora mismo</span>.
-          </h2>
-          <p className="pf-sub">
-            No son maquetas ni plantillas. Todo lo que ves acá está desplegado y se puede abrir y usar.
-          </p>
-
-          <div className="pf-stats">
-            <div className="pf-stat">
-              <strong>{PROJECTS.length}</strong>
-              <span>proyectos en línea</span>
-            </div>
-            <div className="pf-stat">
-              <strong>{FILTERS.length - 1}</strong>
-              <span>rubros distintos</span>
-            </div>
-            <div className="pf-stat">
-              <strong>5-7</strong>
-              <span>días de entrega</span>
-            </div>
-            <div className="pf-stat">
-              <strong>$0</strong>
-              <span>de abono de servidor</span>
-            </div>
+          <div className="pf-head-main">
+            <span className="pf-eyebrow">Trabajo seleccionado / 2025–2026</span>
+            <h2 className="pf-title">
+              Trabajo real.
+              <br />
+              <span className="pf-title-accent">Negocios reales.</span>
+            </h2>
+          </div>
+          <div className="pf-head-side">
+            <p className="pf-sub">
+              No son maquetas ni plantillas: {PROJECTS.length} sistemas desplegados que ya forman parte de las ventas y la operación de cada negocio. Abrilos y usalos.
+            </p>
+            <a href="#servicios" className="pf-pill">
+              Ver qué hacemos <span aria-hidden="true">→</span>
+            </a>
           </div>
         </header>
+
+        <div className="pf-stats">
+          <div className="pf-stat">
+            <strong>{PROJECTS.length}</strong>
+            <span>proyectos en línea</span>
+          </div>
+          <div className="pf-stat">
+            <strong>{FILTERS.length - 1}</strong>
+            <span>rubros distintos</span>
+          </div>
+          <div className="pf-stat">
+            <strong>5-7</strong>
+            <span>días de entrega</span>
+          </div>
+          <div className="pf-stat">
+            <strong>$0</strong>
+            <span>de abono de servidor</span>
+          </div>
+        </div>
 
         <div className="pf-filters" role="tablist" aria-label="Filtrar proyectos">
           {FILTERS.map((f) => (

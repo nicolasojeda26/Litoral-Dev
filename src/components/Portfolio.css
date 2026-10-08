@@ -14,29 +14,31 @@
 /* ------------------------------ Encabezado ------------------------------- */
 
 .pf-head {
-  max-width: 820px;
-  margin: 0 auto 3rem;
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 2rem 4rem;
+  align-items: end;
+  margin: 0 0 3rem;
 }
 
 .pf-eyebrow {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--noche-claro);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .pf-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.75rem, 6.4vw, 5.5rem);
   font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  margin: 0 0 1.25rem;
-  text-wrap: balance;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .pf-title-accent {
@@ -44,28 +46,58 @@
 }
 
 .pf-sub {
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-size: 1.1875rem;
+  line-height: 1.55;
   color: var(--noche-claro);
-  margin: 0 auto;
-  max-width: 54ch;
-  text-wrap: balance;
+  margin: 0 0 1.5rem;
+  max-width: 40ch;
+}
+
+.pf-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 44px;
+  padding: 0.625rem 1.375rem;
+  border-radius: var(--radius-pill);
+  background: var(--arena);
+  color: var(--noche);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: gap 0.2s var(--ease-out), background-color 0.2s ease;
+}
+
+@media (hover: hover) {
+  .pf-pill:hover {
+    gap: 1.125rem;
+    background: var(--atardecer);
+  }
 }
 
 .pf-stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
+  margin: 0 0 3rem;
+  padding: 1.75rem 0;
   border-top: 1px solid rgba(246, 239, 227, 0.16);
+  border-bottom: 1px solid rgba(246, 239, 227, 0.16);
+}
+
+@media (max-width: 860px) {
+  .pf-head {
+    grid-template-columns: 1fr;
+  }
 }
 
 .pf-stat {
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
-  text-align: center;
+  text-align: left;
 }
 
 .pf-stat strong {
@@ -89,9 +121,9 @@
 .pf-filters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .pf-filter {
