@@ -57,7 +57,7 @@ const Hero = () => {
                 <span className="dot bg-yellow"></span>
                 <span className="dot bg-green"></span>
               </div>
-              <div className="mockup-title">litoral.dev/sistema-demo</div>
+              <div className="mockup-title">litoraldev.com.ar/sistema-demo</div>
             </div>
             
             <div className="mockup-body">

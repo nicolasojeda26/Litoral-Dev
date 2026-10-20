@@ -1211,6 +1211,17 @@
   font-size: 0.875rem;
 }
 
+.foot-bottom a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .foot-bottom a:hover {
+    color: var(--atardecer);
+  }
+}
+
 @media (max-width: 860px) {
   .foot-grid {
     grid-template-columns: 1fr 1fr;

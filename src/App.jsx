@@ -548,7 +548,10 @@ const Footer = () => (
       </div>
     </div>
     <div className="wrap foot-bottom">
-      <p>© {new Date().getFullYear()} Litoral Dev. Todos los derechos reservados.</p>
+      <p>
+        © {new Date().getFullYear()} Litoral Dev. Todos los derechos reservados. ·{' '}
+        <a href="https://litoraldev.com.ar">litoraldev.com.ar</a>
+      </p>
     </div>
   </footer>
 );
