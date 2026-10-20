@@ -5,7 +5,7 @@ import logoNegativo from './assets/logo-horizontal-negativo.svg';
 import './index.css';
 import './site.css';
 
-const WHATSAPP = 'https://wa.me/5493795769425';
+const WHATSAPP = 'https://wa.me/5493794021813';
 const wa = (text) => `${WHATSAPP}?text=${encodeURIComponent(text)}`;
 const WA_DEMO = wa('Hola! Quiero solicitar mi Demo Virtual Gratuita para mi negocio.');
 const WA_CONTACTO = wa('Hola! Vi la web de Litoral Dev y quiero hacer una consulta.');
@@ -536,7 +536,7 @@ const Footer = () => (
         <ul>
           <li>
             <a href={WA_CONTACTO} target="_blank" rel="noopener noreferrer">
-              WhatsApp · +54 9 379 576-9425
+              WhatsApp · +54 9 379 402-1813
             </a>
           </li>
           <li>

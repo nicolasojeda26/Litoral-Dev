@@ -24,7 +24,7 @@ const Hero = () => {
           
           <div className="hero-actions">
             <a 
-              href="https://wa.me/5493795769425?text=Hola!%20Quiero%20solicitar%20mi%20Demo%20Virtual%20Gratuita%20para%20mi%20negocio." 
+              href="https://wa.me/5493794021813?text=Hola!%20Quiero%20solicitar%20mi%20Demo%20Virtual%20Gratuita%20para%20mi%20negocio." 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-primary"

@@ -3,7 +3,7 @@ import './Portfolio.css';
 import capturaPrincessLov from '../assets/proyectos/princesslov.webp';
 import capturaPsicoPlus from '../assets/proyectos/psicoplus.webp';
 
-const WHATSAPP = 'https://wa.me/5493795769425';
+const WHATSAPP = 'https://wa.me/5493794021813';
 
 const PROJECTS = [
   {
