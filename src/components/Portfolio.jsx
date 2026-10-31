@@ -55,7 +55,7 @@ const PROJECTS = [
   },
   {
     id: 'gymai',
-    name: 'GymAI',
+    name: 'SpotterApp',
     category: 'Gestión',
     status: 'Demo abierta',
     url: 'https://gym-ai-tawny.vercel.app/',
