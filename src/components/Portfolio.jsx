@@ -105,7 +105,7 @@ const PROJECTS = [
     name: 'Arandu Chess',
     category: 'Plataformas',
     status: 'Online',
-    url: 'https://arandu-chess-web.vercel.app/',
+    url: 'https://arandu-chess-zeta.vercel.app/',
     tagline: 'Plataforma de ajedrez PWA con partidas online, bots por Elo y análisis con Stockfish.',
     problem: 'Enseñar ajedrez con tablero físico y video: sin métricas, sin práctica guiada entre clases.',
     highlights: [
