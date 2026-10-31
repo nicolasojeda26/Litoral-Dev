@@ -23,7 +23,7 @@ const EN_PRODUCCION = [
   'PrincessLov',
   'GymAI',
   'PsicoPlus',
-  'NBG Indumentaria',
+  'SOS Cosméticos',
   'Arandu Chess',
 ];
 
@@ -36,7 +36,7 @@ const RESULTADOS = [
   { who: 'GymAI', text: 'Check-in por DNI con kiosco de auto-atención.', x: 8, y: 34, r: 3 },
   { who: 'Litoral Dev', text: 'Sin abono mensual de servidor.', x: 76, y: 32, r: -3, brand: true },
   { who: 'PsicoPlus', text: 'Agenda, facturación y liquidaciones en un solo lugar.', x: -3, y: 66, r: -2 },
-  { who: 'NBG Indumentaria', text: 'Rifas con sorteo automático, sin planillas.', x: 20, y: 76, r: 2 },
+  { who: 'SOS Cosméticos', text: 'Stock por talle que se descuenta solo al cobrar.', x: 20, y: 76, r: 2 },
   { who: 'Arandu Chess', text: 'Partidas online y análisis con Stockfish.', x: 58, y: 77, r: -4 },
   { who: 'Litoral Dev', text: 'Sistemas funcionando en 5 a 7 días hábiles.', x: 80, y: 64, r: 3, brand: true },
 ];
@@ -47,7 +47,7 @@ const SERVICIOS = [
     title: 'Webs y tiendas online',
     eyebrow: 'Una web que vende',
     text: 'Catálogos autogestionables y tiendas con checkout por WhatsApp o Mercado Pago, optimizadas para cargar rápido y convertir visitas en ventas.',
-    ejemplos: 'Tommy Guns ARG · Librería Bia · PrincessLov',
+    ejemplos: 'SOS Cosméticos · Tommy Guns ARG · Librería Bia · PrincessLov',
     chips: ['Catálogo', 'Carrito', 'Mercado Pago', 'Panel admin'],
     icon: 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.3 2.3c-.6.6-.2 1.7.7 1.7H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z',
   },
@@ -65,7 +65,7 @@ const SERVICIOS = [
     title: 'Plataformas para tu industria',
     eyebrow: 'Desarrollos verticales',
     text: 'Inmobiliarias, sorteos automatizados, educación online: aplicaciones específicas para cuando nada de lo que hay en el mercado encaja con tu rubro.',
-    ejemplos: 'NBG Indumentaria · Arandu Chess',
+    ejemplos: 'Arandu Chess',
     chips: ['Tiempo real', 'Pagos', 'Usuarios', 'PWA'],
     icon: 'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10',
   },
