@@ -229,10 +229,10 @@ const Hero = () => (
       <div className="hero-copy">
         <span className="eyebrow eyebrow-rombo">Agencia de software · Corrientes, AR</span>
         <h1 className="hero-title">
-          Software a medida para empresas que <strong>no improvisan.</strong>
+          Ingeniería de software para empresas que necesitan <strong>sistemas confiables.</strong>
         </h1>
         <p className="hero-lead">
-          Soluciones digitales para negocios que <span>quieren crecer</span>.
+          Desarrollo a medida, sistemas de gestión e integraciones para <span>empresas del NEA</span>.
         </p>
         <p className="hero-text">
           Diseñamos, desarrollamos e integramos sistemas dirigidos por un Analista Programador en Sistemas. Automatizamos tus operaciones sin plantillas genéricas ni costos fijos de servidor.

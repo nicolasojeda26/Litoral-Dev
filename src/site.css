@@ -291,25 +291,24 @@
 }
 
 .hero-title {
+  max-width: 17ch;
   margin: 1.5rem 0 2rem;
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 7vw, 6.5rem);
-  font-weight: 300;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  font-size: clamp(2.5rem, 5.4vw, 5rem);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
   color: var(--noche);
   font-variation-settings: 'opsz' 96;
 }
 
 .hero-title strong {
-  font-weight: 800;
-  background: linear-gradient(var(--atardecer), var(--atardecer)) no-repeat 0 72% / 100% 42%;
-  padding: 0 0.06em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  font-weight: 700;
+  color: var(--rio);
 }
 
 .hero-lead {
+  max-width: 36ch;
   margin: 0 0 1.25rem;
   font-size: clamp(1.25rem, 2vw, 1.625rem);
   font-weight: 400;
